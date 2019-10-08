@@ -1,45 +1,51 @@
 <!DOCTYPE html>
-<html lang = "en">
-<head>
-	<meta charset = "UTF-8">
-	<title>Todos</title>
-</head>
-<body>
-  
-  <header role="banner">
-    <h1>
-      todos
-    </h1>
-  </header>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Todos</title>
+  </head>
+  <body>
+    <div class="todo-app" role="main">
+      <header role="banner">
+        <h1>
+          todos
+        </h1>
+      </header>
 
-  <div class="main" role="main">
+      <div class="upper-menu-bar" role="menubar">
+        <button class="select-all" aria-label="open-list-of-tasks">
+          <img src="icons/select-all.png" role="img" />
+        </button>
+        <input
+          type="text"
+          class="add-todo"
+          placeholder="What needs to be done?"
+          autofocus="autofocuss"
+          aria-label="add-task"
+        />
+      </div>
 
-    <div class="upper-menu-bar" role="menubar">
-        <img src="icons/select-all.png">
-        <input type="text" class="add-todo" placeholder="What needs to be done?">
-    </div>
+      <div class="todo-interaction" role="list">
+        <ul>
+          <li class="todo-task">
+            <input type="checkbox" aria-label="task" />
+            <span class="todo-task-name">HTML</span>
+            <button class="todo-task-delete">Delete task</button>
+          </li>
+        </ul>
+      </div>
 
-    <div class="todo-interaction" role="form">
-      <form class="todo-list" role="listbox">
-          <input type="radio" role="radio"> HTML <br>
-          <input type="radio" role="radio"> CSS <br>
-          <input type="radio" role="radio"> JS <br>
-          <input type="radio" role="radio"> JS tools <br> 
-      </form>
-    </div>
-    
-    <div class="todo-display-edit" role="tab">
+      <div class="todo-display-edit" role="tab">
         <label class="items-left">
           0 itmes left
         </label>
-        <button class="all-tasks" role="button">All</button>
-        <button class="active-tasks" role="button">Active</button>
-        <button class="complited-tasks" role="button">Complited</button>
-        <button class="clear-complited-tasks" role="button">Clear complited</button>
+        <input type="radio" role="radio" value="All" />
+        <input type="radio" role="radio" value="Active" />
+        <input type="radio" role="radio" value="Complited" />
+        <button class="clear-complited-tasks" role="button">
+          Clear complited
+        </button>
+      </div>
     </div>
-    
-  </div>
-
-</body>
-
+  </body>
 </html>
