@@ -14,7 +14,7 @@
 
       <div class="upper-menu-bar" role="menubar">
         <button class="select-all" aria-label="open-list-of-tasks">
-          <img src="icons/select-all.png" role="img" />
+          <img src="icons/select-all.png" role="img" alt="picture of select-all button" />
         </button>
         <input
           type="text"
@@ -33,20 +33,20 @@
             <button class="todo-task-delete">Delete task</button>
           </li>
           <li class="todo-task">
-              <input type="checkbox" aria-label="task" />
-              <span class="todo-task-name">CSS</span>
-              <button class="todo-task-delete">Delete task</button>
-            </li>
-            <li class="todo-task">
-                <input type="checkbox" aria-label="task" />
-                <span class="todo-task-name">JS</span>
-                <button class="todo-task-delete">Delete task</button>
-              </li>
-              <li class="todo-task">
-                  <input type="checkbox" aria-label="task" />
-                  <span class="todo-task-name">JS tools</span>
-                  <button class="todo-task-delete">Delete task</button>
-                </li>
+            <input type="checkbox" aria-label="task" />
+            <span class="todo-task-name">CSS</span>
+            <button class="todo-task-delete">Delete task</button>
+          </li>
+          <li class="todo-task">
+            <input type="checkbox" aria-label="task" />
+            <span class="todo-task-name">JS</span>
+            <button class="todo-task-delete">Delete task</button>
+          </li>
+          <li class="todo-task">
+            <input type="checkbox" aria-label="task" />
+            <span class="todo-task-name">JS tools</span>
+            <button class="todo-task-delete">Delete task</button>
+          </li>
         </ul>
       </div>
 
@@ -54,9 +54,18 @@
         <label class="items-left">
           0 itmes left
         </label>
-        <input type="radio" role="radio" value="All" />
-        <input type="radio" role="radio" value="Active" />
-        <input type="radio" role="radio" value="Complited" />
+        <label class="items-all" role="group">
+          <input type="radio" role="radio" value="All" aria-label="display-all"/>
+          <span class="items-all__text">All</span>
+        </label>
+        <label class="items-active">
+          <input type="radio" role="radio" value="Active" aria-label="display-active"/>
+          <span class="items-all__active">Active</span>
+        </label>
+        <label class="items-complited">
+          <input type="radio" role="radio" value="Complited" aria-label="display-complited"/>
+          <span class="items-complited__text">Complited</span>
+        </label>
         <button class="clear-complited-tasks" role="button">
           Clear complited
         </button>
