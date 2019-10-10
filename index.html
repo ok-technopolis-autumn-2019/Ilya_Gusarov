@@ -50,23 +50,23 @@
         </ul>
       </div>
 
-      <div class="todo-display-edit" role="tab">
-        <label class="items-left">
+      <div class="todo-display-edit" role="menubar">
+        <span class="items-left">
           0 itmes left
-        </label>
-        <label class="items-all" role="group">
+        </span>
+        <label class="items-all" role="menuitem">
           <input type="radio" role="radio" value="All" aria-label="display-all"/>
           <span class="items-all__text">All</span>
         </label>
-        <label class="items-active">
+        <label class="items-active" role="menuitem">
           <input type="radio" role="radio" value="Active" aria-label="display-active"/>
           <span class="items-all__active">Active</span>
         </label>
-        <label class="items-complited">
+        <label class="items-completed" role="menuitem">
           <input type="radio" role="radio" value="Completed" aria-label="display-completed"/>
           <span class="items-completed__text">Completed</span>
         </label>
-        <button class="clear-completed-tasks" role="button">
+        <button class="clear-completed-tasks" role="button" role="menuitem">
           Clear completed
         </button>
       </div>
