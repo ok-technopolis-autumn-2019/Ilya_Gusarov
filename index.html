@@ -56,19 +56,43 @@
             0 itmes left
           </span>
         </div>
-        <label class="items-all" role="menuitem">
-          <input type="radio" role="radio" value="All" aria-label="display-all"/>
-          <span class="items-all__text">All</span>
-        </label>
-        <label class="items-active" role="menuitem">
-          <input type="radio" role="radio" value="Active" aria-label="display-active"/>
-          <span class="items-all__active">Active</span>
-        </label>
-        <label class="items-completed" role="menuitem">
-          <input type="radio" role="radio" value="Completed" aria-label="display-completed"/>
-          <span class="items-completed__text">Completed</span>
-        </label>
-        <button class="clear-completed-tasks" role="button" aria-label="clear-completed">
+        <div class="todo-display-edit__filter">
+          <label class="items-all" role="menuitem">
+            <input
+              type="radio"
+              name="filter"
+              role="radio"
+              value="All"
+              aria-label="display-all"
+            />
+            <span class="items-all__text">All</span>
+          </label>
+          <label class="items-active" role="menuitem">
+            <input
+              type="radio"
+              name="filter"
+              role="radio"
+              value="Active"
+              aria-label="display-active"
+            />
+            <span class="items-all__active">Active</span>
+          </label>
+          <label class="items-completed" role="menuitem">
+            <input
+              type="radio"
+              name="filter"
+              role="radio"
+              value="Completed"
+              aria-label="display-completed"
+            />
+            <span class="items-completed__text">Completed</span>
+          </label>
+        </div>
+        <button
+          class="clear-completed-tasks"
+          role="button"
+          aria-label="clear-completed"
+        >
           Clear completed
         </button>
       </div>
