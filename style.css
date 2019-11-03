@@ -17,7 +17,7 @@ body {
 }
 
 .todo-app .todo-display-edit, .todo-interaction, .upper-menu-bar {
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 header {
@@ -45,21 +45,86 @@ header {
     text-indent: -9999em;
     background-image: url("icons/select-all.svg");
     background-repeat: no-repeat;
-    flex:1;
-    align-items: center;
-    justify-content: center;
+    background-position: center;
+    flex:4;
+    background-color: white;
+    border: none;
+    padding: 0px;
   }
 
   .upper-menu-bar .add-todo {
     flex: 40;
     border: 0px;
     padding: 3px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 21px;
+    letter-spacing: -0.6px;
+    font-style: italic;
+    color: #CCCCCC;
   }
 
 .todo-interaction {
   width: 100%;
   background-color: #ffffff;
+  padding-bottom: 52px;
 }
+
+.todo-interaction__list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+.todo-task{
+  margin-left: -22px;
+  height: 64px;
+  display: flex;
+  box-shadow: inset 0px -1px 0px #E6E6E6;
+  padding:1px;
+}
+  .todo-task__icon {
+    width: 40px;
+    background-image: url("icons/unchecked.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .todo-task__name {
+    padding-top: 23px;
+    margin-left: 10px;
+    flex:1;  
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 21px;
+  }
+
+  .todo-task__delete {
+    visibility: hidden;
+    text-indent: -9999em;
+    background-image: url("icons/delete-task.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    border: 0px;
+    padding: 20px;
+  }
+
+  .todo-task__input:checked ~ .todo-task__name {
+    text-decoration: line-through;
+    color: #CCCCCC;
+  }
+
+  .todo-task__input:checked + .todo-task__icon {
+    background-image: url("icons/checked.svg"),
+                      url("icons/unchecked.svg");
+  }
+  
+  .todo-task:hover .todo-task__delete{
+    visibility: visible;
+  }
 
 .todo-display-edit {
   background-color: #ffffff;
@@ -69,4 +134,8 @@ header {
   display: flex;
   flex-direction: row;
   width: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
 }
