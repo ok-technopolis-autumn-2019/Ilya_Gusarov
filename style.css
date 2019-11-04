@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap');
+
 body {
   display: flex;
   align-items: center;
@@ -5,7 +7,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto", sans-serif;
-  background-color: rgba(0, 0, 0, 0.001);
+  background: rgba(0, 0, 0, 0.0001);
 }
 
 .todo-app {
@@ -27,7 +29,6 @@ body {
   }
 
   .todo-app::after {
-    
     content: '';
     position: absolute;
     top: 100%;
@@ -64,7 +65,7 @@ header {
   height: 66px;
 }
 
-  .upper-menu-bar .select-all {
+  .select-all {
     text-indent: -9999em;
     background-image: url("icons/select-all.svg");
     background-repeat: no-repeat;
@@ -75,7 +76,7 @@ header {
     padding: 0px;
   }
 
-  .upper-menu-bar .add-todo {
+  .add-todo {
     flex: 40;
     border: 0px;
     padding: 3px;
@@ -102,27 +103,26 @@ header {
 
 .todo-task{
   margin-left: -22px;
-  height: 64px;
-  
   display: flex;
   box-shadow: inset 0px -1px 0px #E6E6E6;
   padding:1px;
 }
   .todo-task__icon {
     width: 40px;
+    padding-left: 11px;
+  }
+  .todo-task:hover .todo-task__icon{
     background-image: url("icons/unchecked.svg");
     background-repeat: no-repeat;
     background-position: center;
-    padding-left: 11px;
   }
-
   .todo-task__name {
     padding-top: 23px;
-    flex:1;  
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 21px;
+    width: 500px;
   }
 
   .todo-task__delete {
@@ -143,9 +143,20 @@ header {
 
   .todo-task__input:checked + .todo-task__icon {
     background-image: url("icons/checked_1.svg"), url("icons/checked_2.svg");
+    background-repeat: no-repeat;
+    background-position: center;
   }
   
+  .todo-task__icon:focus {
+    background-image: url("icons/checked_1.svg"), url("icons/checked_2.svg");
+   
+  }
+
   .todo-task:hover .todo-task__delete{
+    visibility: visible;
+  }
+
+  .todo-task__delete:focus {
     visibility: visible;
   }
 
@@ -159,7 +170,7 @@ header {
   font-weight: 300;
   font-size: 14px;
   line-height: 21px;
-  letter-spacing: -0.35px;
+  color: #888888;
 }
 
   .todo-display-edit__item {
@@ -177,11 +188,11 @@ header {
     padding: 2px 9px 2px 9px;
   }
 
-  .todo-display-edit__filter input {
+  .todo-display-edit__filter-input {
     display: none;
   }
 
-  .todo-display-edit__filter__input:checked ~ span{
+  .todo-display-edit__filter-input:checked ~ span{
     border: 1px solid #EBDFDF;
   }
 
@@ -190,7 +201,7 @@ header {
     background-position: center;
     background-color: white;
     border: 0px;
-    font-style: normal;
+    font-style: normal;to
     font-weight: 300;
     font-size: 14px;
     line-height: 21px;
