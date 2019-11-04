@@ -104,37 +104,38 @@ body {
   display: flex;
   box-shadow: inset 0px -1px 0px #E6E6E6;
   padding:1px;
+  align-items: center;
 }
 
   .todo-task__icon {
-    width: 40px;
-    padding-left: 11px;
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    min-width: 35px;
+    border: 1px solid#E6E6E6;
+    box-sizing: border-box;
+    margin: 10px;
   }
 
-    .todo-task:hover .todo-task__icon{
-      background-image: url("icons/unchecked.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
+  .todo-task:hover .todo-task__icon{
+    border:1px solid #ABABAB;
+  }
 
     .todo-task__input:checked + .todo-task__icon {
-      background-image: url("icons/checked_1.svg"), url("icons/checked_2.svg");
+      background-image: url("icons/checked_1.svg");
       background-repeat: no-repeat;
       background-position: center;
-    }
-
-    .todo-task__icon:focus {
-      background-image: url("icons/checked_1.svg"), url("icons/checked_2.svg");
-    
+      border: 1px solid #5DC2AF;
     }
 
   .todo-task__name {
-    padding-top: 20px;
+    padding: 20px 5px 20px 5px;
     font-style: normal;
     font-weight: 300;
     font-size: 24px;
     line-height: 21px;
-    width: 500px;
+    flex-grow: 1;
+    word-break: break-all;
   }
 
     .todo-task__input:checked ~ .todo-task__name {
@@ -148,9 +149,10 @@ body {
     background-image: url("icons/delete-task.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-color: white;
+    background-color: #ffffff;
     border: 0px;
     padding: 20px;
+    
   }
 
     .todo-task:hover .todo-task__delete{
@@ -159,6 +161,7 @@ body {
 
     .todo-task__delete:focus {
       visibility: visible;
+        
     }
 
 .todo-display-edit {
