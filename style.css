@@ -184,8 +184,8 @@ body {
   }
 
   .todo-display-edit__filter {
-    flex: 1;
     text-align: center;
+    
   }
 
   .todo-display-edit__filter span {
@@ -194,10 +194,15 @@ body {
   }
 
   .todo-display-edit__filter-input {
-    display: none;
+    opacity: 0;
+    margin: 0px;
   }
 
-  .todo-display-edit__filter-input:checked ~ span{
+  .todo-display-edit__filter-input:focus:checked ~ span{
+    border: 1px solid #E3D4D4;
+  }
+
+  .todo-display-edit__filter-input:checked  ~ span{
     border: 1px solid #EBDFDF;
   }
 
