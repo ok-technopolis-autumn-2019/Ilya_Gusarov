@@ -121,6 +121,10 @@ body {
     border:1px solid #ABABAB;
   }
 
+    .todo-task__input:focus ~ .todo-task__icon {
+      border:1px solid #ABABAB;
+    }
+
     .todo-task__input:checked + .todo-task__icon {
       background-image: url("icons/checked_1.svg");
       background-repeat: no-repeat;
@@ -144,9 +148,7 @@ body {
     }
 
   .todo-task__delete {
-    visibility: hidden;
     text-indent: -9999em;
-    background-image: url("icons/delete-task.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #ffffff;
@@ -156,12 +158,11 @@ body {
   }
 
     .todo-task:hover .todo-task__delete{
-      visibility: visible;
+      background-image: url("icons/delete-task.svg");
     }
 
     .todo-task__delete:focus {
-      visibility: visible;
-        
+      background-image: url("icons/delete-task.svg");
     }
 
 .todo-display-edit {
