@@ -2,11 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
     <title>Todos</title>
   </head>
   <body>
     <div class="todo-app" role="main">
-      <header role="banner">
+      <header class="head" role="banner">
         <h1 class="title">
           todos
         </h1>
@@ -28,24 +29,48 @@
       <div class="todo-interaction" role="list">
         <ul class="todo-interaction__list">
           <li class="todo-task">
-            <input type="checkbox" aria-label="task" />
-            <span class="todo-task-name">HTML</span>
-            <button class="todo-task-delete">Delete task</button>
+            <input
+              class="todo-task__input"
+              type="checkbox"
+              aria-label="task"
+              id="item1"
+            />
+            <label class="todo-task__icon" for="item1"></label>
+            <span class="todo-task__name">HTML</span>
+            <button class="todo-task__delete">Delete task</button>
           </li>
           <li class="todo-task">
-            <input type="checkbox" aria-label="task" />
-            <span class="todo-task-name">CSS</span>
-            <button class="todo-task-delete">Delete task</button>
+            <input
+              class="todo-task__input"
+              type="checkbox"
+              aria-label="task"
+              id="item2"
+            />
+            <label class="todo-task__icon" for="item2"></label>
+            <span class="todo-task__name">CSS</span>
+            <button class="todo-task__delete">Delete task</button>
           </li>
           <li class="todo-task">
-            <input type="checkbox" aria-label="task" />
-            <span class="todo-task-name">JS</span>
-            <button class="todo-task-delete">Delete task</button>
+            <input
+              class="todo-task__input"
+              type="checkbox"
+              aria-label="task"
+              id="item3"
+            />
+            <label class="todo-task__icon" for="item3"></label>
+            <span class="todo-task__name">JS</span>
+            <button class="todo-task__delete">Delete task</button>
           </li>
           <li class="todo-task">
-            <input type="checkbox" aria-label="task" />
-            <span class="todo-task-name">JS tools</span>
-            <button class="todo-task-delete">Delete task</button>
+            <input
+              class="todo-task__input"
+              type="checkbox"
+              aria-label="task"
+              id="item4"
+            />
+            <label class="todo-task__icon" for="item4"></label>
+            <span class="todo-task__name">JS tools</span>
+            <button class="todo-task__delete">Delete task</button>
           </li>
         </ul>
       </div>
@@ -59,6 +84,7 @@
         <div class="todo-display-edit__filter">
           <label class="items-all" role="menuitem">
             <input
+              class="todo-display-edit__filter-input"
               type="radio"
               name="filter"
               role="radio"
@@ -69,6 +95,7 @@
           </label>
           <label class="items-active" role="menuitem">
             <input
+              class="todo-display-edit__filter-input"
               type="radio"
               name="filter"
               role="radio"
@@ -79,6 +106,7 @@
           </label>
           <label class="items-completed" role="menuitem">
             <input
+              class="todo-display-edit__filter-input"
               type="radio"
               name="filter"
               role="radio"
