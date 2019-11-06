@@ -1,0 +1,56 @@
+.todo-display-edit {
+  background-color: $main-background-color;
+  display: flex;
+  height: 43px;
+  align-items: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: $grey-5;
+}
+
+  .todo-display-edit__item {
+    flex: 0.5;
+    padding-left: 12px;
+  }
+
+  .todo-display-edit__filter {
+    text-align: center;
+    
+    & span {
+      @include auto-icon-border($main-background-color);
+      padding: 2px 9px 2px 9px;
+    }
+    
+  }
+
+  .todo-display-edit__filter-input {
+    opacity: 0;
+    margin: 0px;
+
+    &:focus:checked ~ span{
+      @include auto-icon-border($grey-3);
+    }
+    
+    &:checked  ~ span{
+      @include auto-icon-border($grey-4);
+    }
+
+  }
+
+  .clear-completed-tasks {
+    flex: 0.5;
+    background-position: center;
+    background-color: $main-background-color;
+    border: 0px;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 21px;
+    padding: 0px;
+    color: $grey-5;
+    text-align: end;
+    padding-right: 12px;
+  }
