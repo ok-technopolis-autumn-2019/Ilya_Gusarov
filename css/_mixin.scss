@@ -1,0 +1,17 @@
+@import "_vars.scss";
+
+@mixin pseudo-elements ($shift, $index) {
+  content: '';
+    position: absolute;
+    top: 100%;
+    left: 2px * $shift;
+    right: 2px * $shift;
+    height: 5px * $shift;
+    z-index: $index;
+    background-color: $main-background-color;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@mixin auto-icon-border ($color) {
+  border:1px solid $color;
+}

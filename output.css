@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300&display=swap");
+.todo-task {
+  margin-left: -22px;
+  display: flex;
+  box-shadow: inset 0px -1px 0px #E6E6E6;
+  padding: 1px;
+  align-items: center;
+}
+.todo-task:hover .todo-task__icon {
+  border: 1px solid #888888;
+}
+.todo-task:hover .todo-task__delete {
+  background-image: url("icons/delete-task.svg");
+}
+
+.todo-task__icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 20px;
+  min-width: 35px;
+  border: 1px solid #E6E6E6;
+  box-sizing: border-box;
+  margin: 10px;
+}
+
+.todo-task__input:focus ~ .todo-task__icon {
+  border: 1px solid #888888;
+}
+
+.todo-task__input:checked + .todo-task__icon {
+  background-image: url("icons/checked_1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #5DC2AF;
+}
+
+.todo-task__name {
+  padding: 20px 5px 20px 5px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 21px;
+  flex-grow: 1;
+  word-break: break-all;
+}
+
+.todo-task__input:checked ~ .todo-task__name {
+  text-decoration: line-through;
+  color: #CCCCCC;
+}
+
+.todo-task__delete {
+  text-indent: -9999em;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  border: 0px;
+  padding: 20px;
+}
+.todo-task__delete:focus {
+  background-image: url("icons/delete-task.svg");
+}
+
+.todo-display-edit {
+  background-color: #fff;
+  display: flex;
+  height: 43px;
+  align-items: center;
+  width: 100%;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  color: #888888;
+}
+
+.todo-display-edit__item {
+  flex: 0.5;
+  padding-left: 12px;
+}
+
+.todo-display-edit__filter {
+  text-align: center;
+}
+.todo-display-edit__filter .items__text {
+  border: 1px solid #fff;
+  padding: 2px 9px 2px 9px;
+}
+
+.todo-display-edit__filter-input {
+  opacity: 0;
+  margin: 0px;
+}
+.todo-display-edit__filter-input:focus:checked ~ .items__text {
+  border: 1px solid #E3D4D4;
+}
+.todo-display-edit__filter-input:checked ~ .items__text {
+  border: 1px solid #EBDFDF;
+}
+
+.clear-completed-tasks {
+  flex: 0.5;
+  background-position: center;
+  background-color: #fff;
+  border: 0px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 21px;
+  padding: 0px;
+  color: #888888;
+  text-align: end;
+  padding-right: 12px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+  background: rgba(0, 0, 0, 0.0001);
+}
+
+.todo-app {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  width: 562px;
+}
+.todo-app::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 2px;
+  right: 2px;
+  height: 5px;
+  z-index: -1;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.todo-app::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 4px;
+  right: 4px;
+  height: 10px;
+  z-index: -2;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.todo-app .todo-display-edit, .todo-interaction, .upper-menu-bar {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.head {
+  background-color: rgba(0, 0, 0, 0.001);
+  text-align: center;
+}
+.head .title {
+  padding: 0px;
+  margin: 0px;
+  color: #CCCCCC;
+  font-size: 100px;
+  font-weight: 200;
+}
+
+.upper-menu-bar {
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  height: 66px;
+}
+
+.select-all {
+  text-indent: -9999em;
+  background-image: url("icons/select-all.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 4;
+  background-color: #fff;
+  border: none;
+  padding: 0px;
+}
+
+.add-todo {
+  flex: 40;
+  border: 0px;
+  padding: 3px;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 21px;
+  font-style: italic;
+  color: #CCCCCC;
+}
+
+.todo-interaction {
+  width: 100%;
+  background-color: #fff;
+  padding-bottom: 52px;
+}
+
+.todo-interaction__list {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=output.css.map */
