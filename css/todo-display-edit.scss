@@ -19,7 +19,7 @@
   .todo-display-edit__filter {
     text-align: center;
     
-    & span {
+    & .items__text {
       @include auto-icon-border($main-background-color);
       padding: 2px 9px 2px 9px;
     }
@@ -30,11 +30,11 @@
     opacity: 0;
     margin: 0px;
 
-    &:focus:checked ~ span{
+    &:focus:checked ~ .items__text{
       @include auto-icon-border($grey-3);
     }
     
-    &:checked  ~ span{
+    &:checked  ~ .items__text{
       @include auto-icon-border($grey-4);
     }
 
